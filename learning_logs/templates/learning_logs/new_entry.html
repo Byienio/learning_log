@@ -7,7 +7,8 @@
 <body>
 {% extends 'learning_logs/base.html' %}
 {% block content %}
-<p><a href ="{% url 'learning_logs:topic' topic.id %)">{{ topic }}</a></p>
+<p><a href ="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
+
 <p>Dodaj nowy wpis</p>
 <form action="{% url 'learning_logs:new_entry' topic.id %}" method='post'>
   {% csrf_token %}
